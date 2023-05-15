@@ -10,52 +10,29 @@ namespace QueueAndStackExample
 {
     public class StackQueue
     {
-        public Node top;
+        public Node head;
 
-        public void StackMethod()
+        public void EnqueueMethod()
         {
-            top = null;
+            head = null;
         }
-        public void PushNode(int value)
+        public void EnqueueMethod(int value)
         {
             Node node = new Node(value);
-            if (top == null)
+            if (head == null)
             {
-                node.next = null;
+                head = node;
             }
             else
             {
-                node.next = top;
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
-            top = node;
-            Console.WriteLine("Pushed values :" + value);
-        }
-        public void PeekNode()
-        {
-            if (top == null)
-            {
-                Console.WriteLine("Stack is empty");
-            }
-            Console.WriteLine("peek value :" + this.top.data);
-        }
-        public void PopNode()
-        {
-            if (top == null)
-            {
-                Console.WriteLine("Stack is empty");
-            }
-            Console.WriteLine("pop value :" + this.top.data);
-            this.top = this.top;
-        }
-        public void Display()
-        {
-            Node temp = top;
-            while (temp != null)
-            {
-                Console.WriteLine("stack values : " + temp.data);
-                temp = temp.next;
-            }
-
+            Console.WriteLine("Enqueue element :" +node.data);
         }
 
     }
