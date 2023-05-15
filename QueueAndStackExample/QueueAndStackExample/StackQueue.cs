@@ -30,6 +30,23 @@ namespace QueueAndStackExample
             top = node;
             Console.WriteLine("Pushed values :" + value);
         }
+        public void PeekNode()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            Console.WriteLine("peek value :" + this.top.data);
+        }
+        public void PopNode()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            Console.WriteLine("pop value :" + this.top.data);
+            this.top = this.top;
+        }
         public void Display()
         {
             Node temp = top;
@@ -42,5 +59,4 @@ namespace QueueAndStackExample
         }
 
     }
-    
 }

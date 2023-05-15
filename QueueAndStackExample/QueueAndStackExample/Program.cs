@@ -14,6 +14,8 @@ namespace QueueAndStackExample
             stack.PushNode(56);
             stack.PushNode(30);
             stack.PushNode(70);
+                stack.PopNode();
+                stack.PeekNode();
             stack.Display();
             Console.ReadLine();
         }
