@@ -34,6 +34,32 @@ namespace QueueAndStackExample
             }
             Console.WriteLine("Enqueue element :" +node.data);
         }
+        public void DequeueMethod()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("queue is empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+                Console.WriteLine("first queue is removed.");
+
+            }
+        }
+        public void Display()
+        {
+            Node temp = head;
+            if (temp == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
+        }
 
     }
 }

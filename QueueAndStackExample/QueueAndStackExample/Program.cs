@@ -14,6 +14,8 @@ namespace QueueAndStackExample
             queue.EnqueueMethod(56);
             queue.EnqueueMethod(30);
             queue.EnqueueMethod(70);
+            queue.DequeueMethod();
+            queue.Display();
           //StackQueue stack = new StackQueue();
           //  stack.PushNode(56);
           //  stack.PushNode(30);
